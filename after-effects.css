@@ -1,0 +1,182 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:'Inter', sans-serif;
+  background:#f6f3ef;
+  color:#1f1f1f;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* CONTAINER */
+
+.container{
+  width:95%;
+  max-width:1800px;
+  margin:auto;
+}
+
+/* NAVBAR */
+
+.navbar{
+  position:sticky;
+  top:0;
+  z-index:1000;
+
+  background:rgba(246,243,239,0.92);
+
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.nav-container{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:24px 0;
+}
+
+.logo{
+  text-decoration:none;
+  color:#1f1f1f;
+
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:2rem;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#555;
+
+  transition:0.3s ease;
+}
+
+.nav-links a:hover{
+  color:#000;
+}
+
+/* PAGE */
+
+.project-page{
+  padding:80px 0 120px;
+}
+
+/* HERO */
+
+.project-hero{
+  max-width:850px;
+
+  margin-bottom:70px;
+}
+
+.project-label{
+  text-transform:uppercase;
+
+  letter-spacing:2px;
+
+  font-size:0.8rem;
+
+  color:#8d8176;
+
+  margin-bottom:18px;
+}
+
+.project-hero h1{
+  font-family:'Cormorant Garamond', serif;
+
+  font-size:clamp(3rem, 7vw, 5rem);
+
+  line-height:1.05;
+
+  margin-bottom:24px;
+}
+
+.project-intro{
+  color:#666;
+
+  font-size:1.05rem;
+
+  max-width:650px;
+}
+
+/* VIDEO GRID */
+
+.video-section{
+  display:grid;
+
+  grid-template-columns:repeat(3, 1fr);
+
+  gap:28px;
+
+  width:100%;
+
+  justify-items:center;
+}
+
+/* VIDEO CARD */
+
+.video-card{
+  width:88%;
+
+  align-self:start;
+}
+
+/* VIDEO */
+
+.video-card video{
+  width:100%;
+
+  height:auto;
+
+  display:block;
+
+  border-radius:24px;
+
+  background:black;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  .video-section{
+    grid-template-columns:repeat(2, 1fr);
+  }
+
+}
+
+@media(max-width:700px){
+
+  .video-section{
+    grid-template-columns:1fr;
+  }
+
+  .video-card video{
+    height:auto;
+  }
+
+}
+
+@media(max-width:600px){
+
+  .project-page{
+    padding:50px 0 90px;
+  }
+
+  .nav-container{
+    flex-direction:column;
+    gap:18px;
+  }
+
+}
